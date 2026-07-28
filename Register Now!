@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>747 Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<div class="container">
+
+    <img src="logo.png" class="logo" alt="Logo">
+
+    <h1>Welcome to 747 Live</h1>
+
+    <p>
+        Register now and create your account.
+        Fill up the registration form below.
+    </p>
+
+    <a href="ILAGAY_DITO_FORM_LINK_MO" class="btn">
+        REGISTER NOW
+    </a>
+
+    <div class="footer">
+        © 2026 747 Live Registration
+    </div>
+
+</div>
+
+</body>
+</html>
