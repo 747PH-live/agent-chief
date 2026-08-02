@@ -81,19 +81,19 @@ Facebook Page
 
     <div class="live-box">
         <i class="fas fa-users"></i>
-        <h3>8,426+</h3>
+        <h3 id="playersOnline">8,426+</h3>
         <p>Players Online</p>
     </div>
 
     <div class="live-box">
         <i class="fas fa-trophy"></i>
-        <h3>₱15.8M+</h3>
+        <h3 id="jackpotWon">₱15.80M+</h3>
         <p>Jackpot Won</p>
     </div>
 
     <div class="live-box">
         <i class="fas fa-bolt"></i>
-        <h3>3-5 Mins</h3>
+        <h3 id="withdrawTime">3-5 Mins</h3>
         <p>Average Withdrawal</p>
         
     </div>
@@ -371,7 +371,28 @@ function showActivity(){
 
 showActivity();
 setInterval(showActivity, 6000);
+// ===== LIVE STATS =====
 
+let online = 8426;
+let jackpot = 15.80;
+
+setInterval(() => {
+
+    online += Math.floor(Math.random() * 6);
+
+    document.getElementById("playersOnline").textContent =
+        online.toLocaleString() + "+";
+
+    jackpot += (Math.random() * 0.04);
+
+    document.getElementById("jackpotWon").textContent =
+        "₱" + jackpot.toFixed(2) + "M+";
+
+    const mins = Math.random() < 0.5 ? "2-4 Mins" : "3-5 Mins";
+
+    document.getElementById("withdrawTime").textContent = mins;
+
+}, 2500);
 </script>
 
 </body>
