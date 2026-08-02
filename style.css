@@ -978,7 +978,7 @@ width:auto;
 
 /* TEXT */
 
-.overlay{
+.sport-overlay{
 
     position:absolute;
 
@@ -997,7 +997,7 @@ width:auto;
 }
 
 
-.overlay h3{
+.sport-overlay h3{
 
     color:white;
 
@@ -1008,7 +1008,7 @@ width:auto;
 }
 
 
-.overlay p{
+.sport-overlay p{
 
     color:#ddd;
 
