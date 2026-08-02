@@ -676,3 +676,47 @@ nav{
     right:15px;
     top:85px;
 }
+/* ===========================
+   LIVE STATS
+=========================== */
+
+.live-stats{
+    padding:40px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.live-box{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(34,197,94,.25);
+    border-radius:18px;
+    padding:25px 15px;
+    text-align:center;
+    transition:.3s;
+    backdrop-filter:blur(10px);
+}
+
+.live-box:hover{
+    transform:translateY(-8px);
+    border-color:#22c55e;
+    box-shadow:0 0 20px rgba(34,197,94,.35);
+}
+
+.live-box i{
+    font-size:34px;
+    color:#22c55e;
+    margin-bottom:15px;
+}
+
+.live-box h3{
+    font-size:28px;
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.live-box p{
+    color:#cbd5e1;
+}
