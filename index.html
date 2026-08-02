@@ -95,12 +95,7 @@ Facebook Page
         <i class="fas fa-bolt"></i>
         <h3>3-5 Mins</h3>
         <p>Average Withdrawal</p>
-    </div>
-
-    <div class="live-box">
-        <i class="fas fa-headset"></i>
-        <h3>24/7</h3>
-        <p>Agent Support</p>
+        
     </div>
 
 </section>
@@ -343,41 +338,39 @@ const players = [
 ];
 
 const activities = [
-"won in JILI",
+"won ₱850 in JILI",
+"won ₱1,500 in JILI",
+"won ₱2,800 in JILI",
+"won ₱5,250 in JILI",
+"won ₱8,500 in JILI",
+"won ₱12,000 in JILI",
 "claimed First Cash In Bonus",
-"cash out completed"
-];
-
-const amounts = [
-"₱850",
-"₱1,500",
-"₱2,800",
-"₱5,250",
-"₱8,500",
-"₱12,000"
+"completed Cash Out",
+"received Cashback",
+"joined Chief Picks GC",
+"made first deposit"
 ];
 
 function showActivity(){
 
-    const player = players[Math.floor(Math.random()*players.length)];
-    const action = activities[Math.floor(Math.random()*activities.length)];
-    const amount = amounts[Math.floor(Math.random()*amounts.length)];
+    const player = players[Math.floor(Math.random() * players.length)];
+    const action = activities[Math.floor(Math.random() * activities.length)];
 
     document.getElementById("activityTitle").textContent = player;
-    document.getElementById("activityText").textContent = action + " " + amount;
+    document.getElementById("activityText").textContent = action;
 
     const popup = document.getElementById("activityPopup");
 
     popup.classList.add("show");
 
     setTimeout(() => {
-    popup.classList.remove("show");
-}, 4500);
+        popup.classList.remove("show");
+    }, 4500);
 
 }
 
 showActivity();
-setInterval(showActivity,6000);
+setInterval(showActivity, 6000);
 
 </script>
 
