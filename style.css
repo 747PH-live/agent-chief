@@ -890,9 +890,7 @@ width:auto;
 
 
 /* SPORT CARD */
-
-.sport-card{
-   .football{
+.football{
     background-image:url("assets/football.png");
 }
 
@@ -911,6 +909,22 @@ width:auto;
 .esports{
     background-image:url("assets/esports.png");
 }
+
+
+.sport-card{
+    min-width:260px;
+    height:160px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+    flex-shrink:0;
+    cursor:pointer;
+    transition:.35s;
+}
+.sport-card{
+
 
     min-width:260px;
     height:160px;
