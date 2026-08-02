@@ -892,6 +892,25 @@ width:auto;
 /* SPORT CARD */
 
 .sport-card{
+   .football{
+    background-image:url("assets/football.jpg");
+}
+
+.basketball{
+    background-image:url("assets/basketball.jpg");
+}
+
+.baseball{
+    background-image:url("assets/baseball.jpg");
+}
+
+.tennis{
+    background-image:url("assets/tennis.jpg");
+}
+
+.esports{
+    background-image:url("assets/esports.jpg");
+}
 
     min-width:260px;
     height:160px;
