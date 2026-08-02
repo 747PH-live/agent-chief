@@ -280,8 +280,85 @@ Fast and convenient transactions through supported payment methods.
 </div>
 
 <p class="copyright">
-
 © 2024 Agent Chief. All Rights Reserved.
+</p>
+
 <p class="warning">
 For 21+ only. Play responsibly. No bet is guaranteed.
 </p>
+
+</footer>
+
+<!-- ACTIVITY POPUP -->
+<div class="activity-popup" id="activityPopup">
+
+    <div class="activity-icon">🏆</div>
+
+    <div>
+        <h4 id="activityTitle"></h4>
+        <p id="activityText"></p>
+    </div>
+
+</div>
+
+<script>
+
+const players = [
+"Fergus Laurente",
+"Daniel Guzman",
+"Elton Rico",
+"Arvin dela Cruz",
+"Ernie Sotto",
+"Jacob Vasquez",
+"Jerome Gregorio",
+"Christian Guillermo",
+"Genkei Javier",
+"Christian Reyes",
+"Jaime Nicolas",
+"Ryan Fajardo",
+"Xavier Andaya",
+"Calix Blanco",
+"John Carlo Pimentel"
+];
+
+const activities = [
+"won in JILI",
+"claimed First Cash In Bonus",
+"cash out completed"
+];
+
+const amounts = [
+"₱850",
+"₱1,500",
+"₱2,800",
+"₱5,250",
+"₱8,500",
+"₱12,000"
+];
+
+function showActivity(){
+
+    const player = players[Math.floor(Math.random()*players.length)];
+    const action = activities[Math.floor(Math.random()*activities.length)];
+    const amount = amounts[Math.floor(Math.random()*amounts.length)];
+
+    document.getElementById("activityTitle").textContent = player;
+    document.getElementById("activityText").textContent = action + " " + amount;
+
+    const popup = document.getElementById("activityPopup");
+
+    popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 2200);
+
+}
+
+showActivity();
+setInterval(showActivity,2500);
+
+</script>
+
+</body>
+</html>
