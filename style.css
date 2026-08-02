@@ -609,72 +609,101 @@ nav{
     color:#cfcfcf;
 }
 /* ===========================
-   ACTIVITY POPUP
+   LIVE ACTIVITY POPUP
 =========================== */
 
 .activity-popup{
-    position: fixed;
-    top: 100px;
-    right: 25px;
-    width: 320px;
+    position:fixed;
+    left:20px;
+    bottom:20px;
 
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
 
-    padding: 16px 18px;
+    width:320px;
+    padding:15px 18px;
 
-    background: rgba(12,20,18,.95);
-    border: 1px solid #22c55e;
-    border-radius: 18px;
+    background:rgba(18,22,35,.95);
+    border:1px solid rgba(0,183,255,.35);
+    border-radius:16px;
 
-    backdrop-filter: blur(12px);
+    backdrop-filter:blur(12px);
 
-    box-shadow: 0 0 25px rgba(34,197,94,.35);
+    color:#fff;
 
-    transform: translateX(420px);
-    opacity: 0;
+    box-shadow:0 0 25px rgba(0,183,255,.25);
 
-    transition: .45s ease;
+    transform:translateX(-380px);
+    opacity:0;
 
-    z-index: 99999;
+    transition:.6s;
+
+    z-index:99999;
 }
 
 .activity-popup.show{
-    transform: translateX(0);
-    opacity: 1;
+    transform:translateX(0);
+    opacity:1;
 }
 
 .activity-icon{
     width:55px;
     height:55px;
-    border-radius:50%;
-    background:#22c55e;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:28px;
-    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#00d4ff,#007bff);
+
+    font-size:26px;
+
+    animation:pulse 2s infinite;
 }
 
 .activity-popup h4{
-    font-size:16px;
-    color:#fff;
-    margin-bottom:4px;
+    margin:0;
+    font-size:17px;
+    font-weight:700;
 }
 
 .activity-popup p{
+    margin:4px 0 0;
+    color:#d8d8d8;
     font-size:14px;
-    color:#b7b7b7;
-    line-height:1.4;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.12);
+}
+
+100%{
+transform:scale(1);
+}
+
 }
 
 @media(max-width:768px){
 
 .activity-popup{
-    width:calc(100% - 30px);
-    right:15px;
-    top:85px;
+
+left:12px;
+right:12px;
+bottom:15px;
+
+width:auto;
+
+}
+
 }
 /* ===========================
    LIVE STATS
