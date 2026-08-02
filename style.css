@@ -878,14 +878,19 @@ width:auto;
 
 .carousel-track{
     display:flex;
-    gap:22px;
+    gap:15px;
     overflow-x:auto;
+    padding:20px 30px;
     scroll-behavior:smooth;
-    padding:0 40px 20px;
 }
 
 .carousel-track::-webkit-scrollbar{
     display:none;
+}
+
+.sport-card{
+    min-width:200px;
+    height:110px;
 }
 
 
