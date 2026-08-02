@@ -893,11 +893,11 @@ width:auto;
 
 .sport-card{
    .football{
-    background-image:url("assets/football.jpg");
+    background-image:url("assets/football.png");
 }
 
 .basketball{
-    background-image:url("assets/basketball.jpg");
+    background-image:url("assets/basketball.png");
 }
 
 .baseball{
@@ -905,11 +905,11 @@ width:auto;
 }
 
 .tennis{
-    background-image:url("assets/tennis.jpg");
+    background-image:url("assets/tennis.png");
 }
 
 .esports{
-    background-image:url("assets/esports.jpg");
+    background-image:url("assets/esports.png");
 }
 
     min-width:260px;
