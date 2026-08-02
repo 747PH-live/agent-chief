@@ -433,6 +433,17 @@ setInterval(() => {
     document.getElementById("withdrawTime").textContent = mins;
 
 }, 2500);
+// ===== BURGER MENU =====
+
+function openMenu() {
+    document.getElementById("sideMenu").classList.add("show");
+    document.getElementById("overlay").classList.add("show");
+}
+
+function closeMenu() {
+    document.getElementById("sideMenu").classList.remove("show");
+    document.getElementById("overlay").classList.remove("show");
+}
 </script>
 
 </body>
