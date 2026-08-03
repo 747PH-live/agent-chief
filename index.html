@@ -163,8 +163,9 @@ Facebook Page
 Register today and get your First Cash In Bonus.
 </p>
 
-<a href="https://m.me/d.betting.chief" class="promo-btn">
-CLAIM NOW
+<a href="#" class="promo-btn" onclick="openBonus(); return false;">
+    CLAIM NOW
+</a>
 </a>
 
 </div>
@@ -574,6 +575,25 @@ function closeMenu() {
     document.getElementById("overlay").classList.remove("show");
 }
 </script>
+<!-- BONUS SPIN MODAL -->
+<div id="bonusModal" class="bonus-modal">
 
+    <div class="bonus-box">
+
+        <span class="close-modal" onclick="closeBonus()">&times;</span>
+
+        <h2>🎁 Welcome Bonus</h2>
+
+        <p>
+            Spin the Lucky Wheel and reveal your welcome reward!
+        </p>
+
+        <button class="spin-btn">
+            🎡 SPIN NOW
+        </button>
+
+    </div>
+
+</div>
 </body>
 </html>
