@@ -1156,7 +1156,7 @@ width:auto;
 .chip{
     position:absolute;
     width:70px;
-    opacity:.12;
+    opacity:.25;
     animation:floatChip linear infinite;
 }
 
