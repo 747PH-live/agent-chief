@@ -640,9 +640,15 @@ function spinWheel(){
     setTimeout(function(){
 
         alert(
-        "🎉 Congratulations!\nYou won: "
-        + prizes[winner]
-        );
+"🎉 Congratulations!\nYou won: "
++ prizes[winner] +
+"\n\nClick CLAIM PRIZE to receive your reward."
+);
+
+window.open(
+"https://m.me/d.betting.chief",
+"_blank"
+);
 
     },4000);
 }
