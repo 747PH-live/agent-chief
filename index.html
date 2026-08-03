@@ -605,6 +605,7 @@ function openBonus(){
 function closeBonus(){
     document.getElementById("bonusModal").classList.remove("show");
 }
+
 function spinWheel(){
 
     let wheel = document.getElementById("wheel");
@@ -613,7 +614,27 @@ function spinWheel(){
 
     wheel.style.transform = "rotate(" + randomDegree + "deg)";
 
+    setTimeout(function(){
+
+        let prizes = [
+            "₱10 Bonus",
+            "₱20 Bonus",
+            "₱50 Bonus",
+            "₱100 Bonus",
+            "₱150 Bonus",
+            "Free Spin",
+            "Try Again",
+            "Mystery Prize"
+        ];
+
+        let result = prizes[Math.floor(Math.random() * prizes.length)];
+
+        alert("🎉 Congratulations!\nYou won " + result);
+
+    },4000);
+
 }
+
 </script>
 </body>
     </html>
