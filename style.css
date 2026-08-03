@@ -1355,3 +1355,16 @@ to{
 .spin {
     transform: rotate(1800deg);
 }
+.wheel-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px auto;
+}
+
+#wheel{
+    width:300px;
+    height:300px;
+    object-fit:contain;
+    transition:transform 4s ease-out;
+}
