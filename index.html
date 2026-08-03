@@ -605,7 +605,15 @@ function openBonus(){
 function closeBonus(){
     document.getElementById("bonusModal").classList.remove("show");
 }
+function spinWheel(){
 
+    let wheel = document.getElementById("wheel");
+
+    let randomDegree = Math.floor(Math.random() * 3600) + 1800;
+
+    wheel.style.transform = "rotate(" + randomDegree + "deg)";
+
+}
 </script>
 </body>
     </html>
