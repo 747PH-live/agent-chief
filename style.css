@@ -1222,7 +1222,8 @@ width:auto;
     font-size:12px;
 }.live-box i{
     font-size:22px;
-}/* 2 COLUMN LAYOUT MOBILE */
+}
+/* 2 COLUMN LAYOUT MOBILE */
 
 .cards,
 .games-grid,
@@ -1232,7 +1233,6 @@ width:auto;
     grid-template-columns:repeat(2, 1fr);
     gap:15px;
 }
-
 
 /* Mobile adjustment */
 
