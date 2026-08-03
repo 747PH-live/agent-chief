@@ -575,126 +575,19 @@ function closeMenu() {
     document.getElementById("overlay").classList.remove("show");
 }
 </script>
-<!-- BONUS SPIN MODAL -->
-<div id="bonusModal" class="bonus-modal">
+<div class="bonus-reveal">
+    <button class="spin-btn" onclick="revealBonus()">
+        🎁 REVEAL BONUS
+    </button>
 
-    <div class="bonus-box">
+    <div class="bonus-result"></div>
 
-        <span class="close-modal" onclick="closeBonus()">&times;</span>
-
-        <h2>🎁 Lucky Spin</h2>
-
-        <p>Spin the wheel for your welcome reward!</p>
-
-        <div class="wheel-container">
-
-            <div class="pointer"></div>
-
-            <img id="wheel" src="wheel.png">
-
-        </div>
-
-        <button class="spin-btn" onclick="spinWheel()">SPIN NOW</button>
-
-        <button class="stop-btn" onclick="stopWheel()" style="display:none;">
-            STOP
-        </button>
-
-        <div class="bonus-result"></div>
-
-        <a href="https://m.me/d.betting.chief" 
-           target="_blank" 
-           class="claim-btn" 
-           style="display:none;">
-            CLAIM PRIZE
-        </a>
-
-    </div>
-
+    <a href="https://m.me/d.betting.chief"
+       target="_blank"
+       class="claim-btn"
+       style="display:none;">
+        CLAIM PRIZE
+    </a>
 </div>
-
-let wheel = document.getElementById("wheel");
-
-let spinning = false;
-let rotation = 0;
-let speed = 25;
-
-let animation;
-<script>
-
-function openBonus(){
-    document.getElementById("bonusModal").classList.add("show");
-}
-
-function closeBonus(){
-    document.getElementById("bonusModal").classList.remove("show");
-}
-
-let wheel = document.getElementById("wheel");
-
-let rotation = 0;
-let speed = 25;
-let animation;
-
-let spinning = false;
-
-function spinWheel(){
-
-    if(spinning) return;
-
-    spinning = true;
-
-    document.querySelector(".spin-btn").style.display="none";
-    document.querySelector(".stop-btn").style.display="inline-block";
-
-    function rotate(){
-
-        rotation += speed;
-
-        wheel.style.transform = "rotate(" + rotation + "deg)";
-
-        animation = requestAnimationFrame(rotate);
-
-    }
-
-    rotate();
-
-
-
-}
-
-
-function stopWheel(){
-
-    if(!spinning) return;
-
-    spinning = false;
-
-    cancelAnimationFrame(animation);
-
-    document.querySelector(".stop-btn").style.display = "none";
-    document.querySelector(".spin-btn").style.display = "inline-block";
-
-    let prizes = [
-        "₱150 Grand Prize",
-        "₱100 Bonus",
-        "₱50 Bonus",
-        "Cashback",
-        "Free Spin",
-        "₱100 Bonus",
-        "₱50 Bonus",
-        "Mystery Prize"
-    ];
-
-    let winner = Math.floor(Math.random() * prizes.length);
-
-    document.querySelector(".bonus-result").innerHTML =
-        "🎉 Congratulations!<br><b>" + prizes[winner] + "</b>";
-
-    document.querySelector(".claim-btn").style.display = "inline-block";
-
-}
-
-</script>
 </body>
     </html>
