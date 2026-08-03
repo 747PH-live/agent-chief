@@ -586,19 +586,33 @@ function closeMenu() {
 
         <p>Spin the wheel for your welcome reward!</p>
 
-    <div class="wheel-container">
+        <div class="wheel-container">
 
-    <div class="pointer"></div>
+            <div class="pointer"></div>
 
-    <img id="wheel" src="wheel.png">
+            <img id="wheel" src="wheel.png">
 
-</div>
+        </div>
 
         <button class="spin-btn" onclick="spinWheel()">SPIN NOW</button>
+
+        <button class="stop-btn" onclick="stopWheel()" style="display:none;">
+            STOP
+        </button>
+
+        <div class="bonus-result"></div>
+
+        <a href="https://m.me/d.betting.chief" 
+           target="_blank" 
+           class="claim-btn" 
+           style="display:none;">
+            CLAIM PRIZE
+        </a>
 
     </div>
 
 </div>
+
 
 <script>
 
@@ -610,50 +624,88 @@ function closeBonus(){
     document.getElementById("bonusModal").classList.remove("show");
 }
 
+
+let spinning = false;
+let currentRotation = 0;
+
+
 function spinWheel(){
 
+    if(spinning) return;
+
     let wheel = document.getElementById("wheel");
+
+    let stopBtn = document.querySelector(".stop-btn");
+    let spinBtn = document.querySelector(".spin-btn");
+
+    spinning = true;
+
+    spinBtn.style.display="none";
+    stopBtn.style.display="inline-block";
+
+
+    currentRotation += 3600;
+
+    wheel.style.transform =
+    "rotate(" + currentRotation + "deg)";
+
+
+}
+
+
+function stopWheel(){
+
+    let wheel = document.getElementById("wheel");
+
+    let stopBtn = document.querySelector(".stop-btn");
+    let spinBtn = document.querySelector(".spin-btn");
 
     let prizes = [
         "₱150 Grand Prize",
         "₱100 Bonus",
         "₱50 Bonus",
-        "Cashback",
+        "First Bet Cashback",
         "Free Spin",
         "₱100 Bonus",
         "₱50 Bonus",
         "Mystery Prize"
     ];
 
-    let winner = Math.floor(Math.random() * prizes.length);
+
+    let winner = Math.floor(Math.random()*prizes.length);
+
 
     let sliceDegree = 360 / prizes.length;
 
-    let stopDegree = (winner * sliceDegree) + (sliceDegree / 2);
+    let finalRotation = 
+    currentRotation + (360 - (winner * sliceDegree));
 
-    let totalSpin = 3600 + (360 - stopDegree);
 
     wheel.style.transform =
-    "rotate(" + totalSpin + "deg)";
+    "rotate(" + finalRotation + "deg)";
 
 
     setTimeout(function(){
 
-        alert(
-"🎉 Congratulations!\nYou won: "
-+ prizes[winner] +
-"\n\nClick CLAIM PRIZE to receive your reward."
-);
+        document.querySelector(".bonus-result").innerHTML =
+        "🎉 Congratulations!<br>You won <b>"
+        + prizes[winner] +
+        "</b>";
 
-window.open(
-"https://m.me/d.betting.chief",
-"_blank"
-);
+
+        document.querySelector(".claim-btn").style.display="inline-block";
+
+        stopBtn.style.display="none";
+
+        spinBtn.style.display="inline-block";
+
+        spinning=false;
+
 
     },4000);
+
 }
-    
+
 </script>
-    
 </body>
     </html>
