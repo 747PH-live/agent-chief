@@ -1347,3 +1347,11 @@ to{
 
     filter:drop-shadow(0 0 10px gold);
 }
+#wheel {
+    width: 300px;
+    transition: transform 4s ease-out;
+}
+
+.spin {
+    transform: rotate(1800deg);
+}
