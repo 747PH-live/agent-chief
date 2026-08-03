@@ -1368,16 +1368,6 @@ to{
     object-fit:contain;
     transition:transform 4s ease-out;
 }
-.pointer{
-    position:absolute;
-    top:-15px;
-    left:50%;
-    transform:translateX(-50%);
-    font-size:45px;
-    color:#ffd700;
-    z-index:10;
-    filter:drop-shadow(0 0 8px gold);
-}
 
 .wheel-container{
     position:relative;
