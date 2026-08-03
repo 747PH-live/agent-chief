@@ -582,20 +582,27 @@ function closeMenu() {
 
         <span class="close-modal" onclick="closeBonus()">&times;</span>
 
-        <h2>🎁 Welcome Bonus</h2>
+        <h2>🎁 Lucky Spin</h2>
 
-        <p>
-            Spin the Lucky Wheel and reveal your welcome reward!
-        </p>
+        <p>Spin the wheel for your welcome reward!</p>
 
-        <button class="spin-btn">
-            🎡 SPIN NOW
+        <div class="wheel">
+            <div class="wheel-center">
+                SPIN
+            </div>
+        </div>
+
+        <button class="spin-btn" onclick="spinWheel()">
+            SPIN NOW
         </button>
+
+        <div id="spinResult"></div>
 
     </div>
 
 </div>
-    <script>
+
+<script>
 
 function openBonus(){
     document.getElementById("bonusModal").classList.add("show");
