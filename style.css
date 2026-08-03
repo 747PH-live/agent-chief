@@ -83,12 +83,12 @@ nav{
 /* HERO */
 
 .hero{
-    min-height:100vh;
+    min-height:auto;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:120px 20px;
+    padding:60px 20px;
 }
 
 .hero-logo{
