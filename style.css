@@ -1081,4 +1081,28 @@ width:auto;
 
 .game-overlay h3{
     color:#fff;
-    font-size:20
+    font-size:20px;
+    font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.games-section{
+    padding:60px 20px;
+}
+
+.games-grid{
+    gap:15px;
+}
+
+.game-card{
+    height:140px;
+}
+
+.game-overlay h3{
+    font-size:17px;
+}
+
+}
