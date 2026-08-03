@@ -1204,7 +1204,6 @@ width:auto;
 /* ===========================
    BONUS SPIN POPUP
 =========================== */
-
 .bonus-modal{
     position:fixed;
     inset:0;
@@ -1227,16 +1226,17 @@ width:auto;
     visibility:visible;
 }
 
+
 .bonus-box{
     width:90%;
-    max-width:420px;
+    max-width:380px;
 
     background:#0b1d13;
 
     border:2px solid #22c55e;
     border-radius:25px;
 
-    padding:35px 25px;
+    padding:30px 20px;
 
     text-align:center;
 
@@ -1247,17 +1247,21 @@ width:auto;
     animation:popup .35s ease;
 }
 
+
 @keyframes popup{
 
-from{
-    transform:scale(.75);
-    opacity:0;
+    from{
+        transform:scale(.75);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
 }
 
-to{
-    transform:scale(1);
-    opacity:1;
-}
 
 .close-modal{
 
@@ -1274,24 +1278,84 @@ to{
 
 }
 
+
 .bonus-box h2{
 
-    font-size:32px;
+    font-size:28px;
     color:#22c55e;
 
-    margin-bottom:15px;
+    margin-bottom:10px;
 
 }
+
 
 .bonus-box p{
 
     color:#ddd;
 
-    line-height:1.7;
+    line-height:1.5;
 
-    margin-bottom:30px;
+    margin-bottom:20px;
 
 }
+
+
+/* WHEEL */
+
+.wheel-container{
+
+    position:relative;
+
+    width:260px;
+    height:260px;
+
+    margin:20px auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+#wheel{
+
+    width:260px;
+    height:260px;
+
+    object-fit:contain;
+
+    transition:transform 4s ease-out;
+
+}
+
+
+/* ARROW */
+
+.pointer{
+
+    position:absolute;
+
+    top:-15px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:0;
+    height:0;
+
+    border-left:15px solid transparent;
+    border-right:15px solid transparent;
+    border-top:30px solid #ffd700;
+
+    z-index:10;
+
+    filter:drop-shadow(0 0 10px gold);
+
+}
+
+
+/* BUTTON */
 
 .spin-btn{
 
@@ -1301,7 +1365,7 @@ to{
 
     border:none;
 
-    padding:18px 45px;
+    padding:15px 40px;
 
     border-radius:50px;
 
@@ -1315,42 +1379,11 @@ to{
 
 }
 
+
 .spin-btn:hover{
 
     transform:scale(1.08);
 
     box-shadow:0 0 25px #22c55e;
 
-}
-#wheel{
-    width:300px;
-    height:300px;
-    object-fit:contain;
-    transition:transform 4s ease-out;
-}
-
-.wheel-container{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin:20px auto;
-}
-
-.pointer{
-    position:absolute;
-    left:50%;
-    top:-18px;
-    transform:translateX(-50%);
-
-    width:0;
-    height:0;
-
-    border-left:15px solid transparent;
-    border-right:15px solid transparent;
-    border-top:30px solid #ffd700;
-
-    z-index:10;
-
-    filter:drop-shadow(0 0 10px gold);
 }
