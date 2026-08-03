@@ -1136,70 +1136,68 @@ width:auto;
    FLOATING CASINO CHIPS
 =========================== */
 
-.games-section{
-    position:relative;
-    overflow:hidden;
-}
-
 .floating-chips{
-    position:absolute;
+    position:fixed;
     inset:0;
+    overflow:hidden;
     pointer-events:none;
     z-index:1;
-}
-
-.games-grid{
-    position:relative;
-    z-index:2;
 }
 
 .chip{
     position:absolute;
     width:70px;
-    opacity:.25;
+    opacity:.18;
     animation:floatChip linear infinite;
+    filter:drop-shadow(0 0 15px rgba(255,215,0,.35));
 }
+
+/* Positions */
 
 .chip1{
     left:8%;
-    bottom:-80px;
-    animation-duration:16s;
+    animation-duration:22s;
+    animation-delay:0s;
 }
 
 .chip2{
     left:28%;
-    bottom:-120px;
-    animation-duration:20s;
-    animation-delay:2s;
-}
-
-.chip3{
-    right:20%;
-    bottom:-100px;
+    width:60px;
     animation-duration:18s;
     animation-delay:4s;
 }
 
+.chip3{
+    left:50%;
+    width:80px;
+    animation-duration:26s;
+    animation-delay:2s;
+}
+
 .chip4{
-    right:8%;
-    bottom:-150px;
-    animation-duration:22s;
-    animation-delay:1s;
+    left:72%;
+    width:65px;
+    animation-duration:20s;
+    animation-delay:7s;
 }
 
 .chip5{
-    left:55%;
-    bottom:-130px;
+    left:90%;
+    width:75px;
     animation-duration:24s;
-    animation-delay:3s;
+    animation-delay:5s;
 }
 
+/* Animation */
+
 @keyframes floatChip{
+
     0%{
-        transform:translateY(0) rotate(0deg);
+        transform:translateY(110vh) rotate(0deg);
     }
 
     100%{
-        transform:translateY(-130vh) rotate(720deg);
+        transform:translateY(-150px) rotate(360deg);
     }
+
 }
