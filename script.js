@@ -146,3 +146,28 @@ topButton.addEventListener("click", ()=>{
 });
 
 console.log("AGENT CHIEF Landing Page Loaded Successfully");
+function spinWheel(){
+
+    let wheel = document.getElementById("wheel");
+
+    let randomDegree = Math.floor(Math.random() * 3600) + 1800;
+
+    wheel.style.transform = "rotate(" + randomDegree + "deg)";
+
+    setTimeout(function(){
+
+        let prizes = [
+            "₱10",
+            "₱20",
+            "₱50",
+            "₱100",
+            "₱150"
+        ];
+
+        let win = prizes[Math.floor(Math.random()*prizes.length)];
+
+        alert("Congratulations! You won " + win);
+
+    },4000);
+
+}
