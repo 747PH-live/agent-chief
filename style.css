@@ -1222,4 +1222,27 @@ width:auto;
     font-size:12px;
 }.live-box i{
     font-size:22px;
+}/* 2 COLUMN LAYOUT MOBILE */
+
+.cards,
+.games-grid,
+.payment-cards,
+.steps{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:15px;
+}
+
+
+/* Mobile adjustment */
+
+@media(max-width:480px){
+
+    .cards,
+    .games-grid,
+    .payment-cards,
+    .steps{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
 }
