@@ -1322,16 +1322,21 @@ to{
     box-shadow:0 0 25px #22c55e;
 
 }
-#wheel {
-    width: 300px;
-    transition: transform 4s ease-out;
+#wheel{
+    width:300px;
+    height:300px;
+    object-fit:contain;
+    transition:transform 4s ease-out;
 }
+
 .wheel-container{
+    position:relative;
     display:flex;
     justify-content:center;
     align-items:center;
     margin:20px auto;
 }
+
 .pointer{
     position:absolute;
     left:50%;
@@ -1348,17 +1353,4 @@ to{
     z-index:10;
 
     filter:drop-shadow(0 0 10px gold);
-
-#wheel{
-    width:300px;
-    height:300px;
-    object-fit:contain;
-    transition:transform 4s ease-out;
-}
-
-.wheel-container{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
 }
