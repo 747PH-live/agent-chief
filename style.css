@@ -1132,3 +1132,74 @@ width:auto;
 .game-card:hover::before{
     opacity:1;
 }
+/* ===========================
+   FLOATING CASINO CHIPS
+=========================== */
+
+.games-section{
+    position:relative;
+    overflow:hidden;
+}
+
+.floating-chips{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+.games-grid{
+    position:relative;
+    z-index:2;
+}
+
+.chip{
+    position:absolute;
+    width:70px;
+    opacity:.12;
+    animation:floatChip linear infinite;
+}
+
+.chip1{
+    left:8%;
+    bottom:-80px;
+    animation-duration:16s;
+}
+
+.chip2{
+    left:28%;
+    bottom:-120px;
+    animation-duration:20s;
+    animation-delay:2s;
+}
+
+.chip3{
+    right:20%;
+    bottom:-100px;
+    animation-duration:18s;
+    animation-delay:4s;
+}
+
+.chip4{
+    right:8%;
+    bottom:-150px;
+    animation-duration:22s;
+    animation-delay:1s;
+}
+
+.chip5{
+    left:55%;
+    bottom:-130px;
+    animation-duration:24s;
+    animation-delay:3s;
+}
+
+@keyframes floatChip{
+    0%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(-130vh) rotate(720deg);
+    }
+}
